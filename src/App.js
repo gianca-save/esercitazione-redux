@@ -1,17 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
-import {useSelector, useDispatch} from "react-redux";
 import setChangeColor from './Store/actions';
+import MyContext from './Context/colorProvider.js';
+import {useContext} from 'react';
 
 
 function App() {
   
-  const current_color = useSelector(state => state.colore);
-
-  const dispatch = useDispatch();
+  const {dispatch, state:{colore}} = useContext(MyContext);
   
   return (
-    <div style={{backgroundColor: current_color }} className="App">
+    <div style={{backgroundColor: colore }} className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <button onClick={() => dispatch(setChangeColor('green'))}>Sfondo verde</button>

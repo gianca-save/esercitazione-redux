@@ -2,15 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import {Provider} from "react-redux";
-import store from './Store/reduxStore';
 import reportWebVitals from './reportWebVitals';
+import MyContextProvider from './Context/colorProvider.js';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
+    <MyContextProvider>
     <App />
-    </Provider>
+    </MyContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
