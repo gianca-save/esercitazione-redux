@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import setChangeColor from './Store/actions';
-import MyContext from './Context/colorProvider.js';
+import {MyContext} from './Context/colorProvider.js';
 import {useContext} from 'react';
 
 
